@@ -1,0 +1,421 @@
+[09/11 14:37:44][INFO] WBNCF:   41: terminal cmd: python D:\DoAn2023\DRWBNCF-main\DRWBNCF-main\main.py
+[09/11 14:37:44][INFO] WBNCF:   42: log file: runs\global-10-fold\Cdataset\WBNCF\2023-09-11_14-37-44\2023-09-11 14-37-44.log
+[09/11 14:37:44][INFO] WBNCF:  132: {'alpha': 0.5,
+ 'comment': 'runs',
+ 'dataset_name': 'Cdataset',
+ 'dataset_type': None,
+ 'debug': False,
+ 'disease_feature_topk': 16,
+ 'disease_idx': None,
+ 'disease_neighbor_num': 25,
+ 'dropout': 0.4,
+ 'drug_feature_topk': 16,
+ 'drug_idx': None,
+ 'drug_neighbor_num': 25,
+ 'embedding_dim': 64,
+ 'epochs': 64,
+ 'gamma': 2.0,
+ 'global_test_all_zero': False,
+ 'gpus': 1,
+ 'hidden_dims': (64, 32),
+ 'lamda': 0.8,
+ 'log_dir': 'runs\\global-10-fold\\Cdataset\\WBNCF\\2023-09-11_14-37-44',
+ 'loss_fn': 'focal',
+ 'lr': 0.0005,
+ 'model': 'NNCFDR',
+ 'n_disease': 409,
+ 'n_drug': 663,
+ 'n_splits': 10,
+ 'neighbor_embedding_dim': 32,
+ 'pos_weight': 106.09597156398104,
+ 'profiler': False,
+ 'seed': 666,
+ 'separate': False,
+ 'size_u': 663,
+ 'size_v': 409,
+ 'split_mode': 'global',
+ 'time_stamp': '2023-09-11_14-37-44',
+ 'train_fill_unknown': True}
+[09/11 14:37:46][INFO] WBNCF:  157: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:37:46][INFO] WBNCF:  158: begin train fold 0/10
+[09/11 14:39:40][INFO] WBNCF:  160: end train fold 0/10
+[09/11 14:39:40][INFO] WBNCF:   77: eval time cost: 0.7836027145385742
+[09/11 14:39:40][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:39:40][INFO] WBNCF:   86: save time cost: 0.00301361083984375
+[09/11 14:39:40][INFO] WBNCF:  170: 0/10 folds: {'aupr': 0.3763120781379798, 'auroc': 0.9141817577485662, 'lagcn_aupr': 0.37979170647469995, 'lagcn_auc': 0.9141623438075323, 'lagcn_f1_score': 0.437751, 'lagcn_accuracy': 0.98967475, 'lagcn_recall': 0.42913386, 'lagcn_specificity': 0.9949747, 'lagcn_precision': 0.44672132}
+[09/11 14:39:40][INFO] WBNCF:  171: 0/10 folds time cost: 116.23190879821777
+[09/11 14:39:40][INFO] WBNCF:  158: begin train fold 1/10
+[09/11 14:41:34][INFO] WBNCF:  160: end train fold 1/10
+[09/11 14:41:35][INFO] WBNCF:   77: eval time cost: 0.7840595245361328
+[09/11 14:41:35][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:41:35][INFO] WBNCF:   86: save time cost: 0.003000020980834961
+[09/11 14:41:35][INFO] WBNCF:  170: 1/10 folds: {'aupr': 0.3386434935557322, 'auroc': 0.9022818495495538, 'lagcn_aupr': 0.3550315397165333, 'lagcn_auc': 0.9022999511867715, 'lagcn_f1_score': 0.42038217, 'lagcn_accuracy': 0.9899329, 'lagcn_recall': 0.38976377, 'lagcn_specificity': 0.9956075, 'lagcn_precision': 0.4562212}
+[09/11 14:41:35][INFO] WBNCF:  171: 1/10 folds time cost: 114.23338651657104
+[09/11 14:41:35][INFO] WBNCF:  158: begin train fold 2/10
+[09/11 14:43:27][INFO] WBNCF:  160: end train fold 2/10
+[09/11 14:43:28][INFO] WBNCF:   77: eval time cost: 0.7963294982910156
+[09/11 14:43:28][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:43:28][INFO] WBNCF:   86: save time cost: 0.0030024051666259766
+[09/11 14:43:28][INFO] WBNCF:  170: 2/10 folds: {'aupr': 0.34635701726372464, 'auroc': 0.8967108809827044, 'lagcn_aupr': 0.34658767501046644, 'lagcn_auc': 0.8967061696146372, 'lagcn_f1_score': 0.41346154, 'lagcn_accuracy': 0.99100196, 'lagcn_recall': 0.33992094, 'lagcn_specificity': 0.99713373, 'lagcn_precision': 0.5276074}
+[09/11 14:43:28][INFO] WBNCF:  171: 2/10 folds time cost: 113.28998732566833
+[09/11 14:43:28][INFO] WBNCF:  158: begin train fold 3/10
+[09/11 14:45:21][INFO] WBNCF:  160: end train fold 3/10
+[09/11 14:45:22][INFO] WBNCF:   77: eval time cost: 0.9092130661010742
+[09/11 14:45:22][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:45:22][INFO] WBNCF:   86: save time cost: 0.0035126209259033203
+[09/11 14:45:22][INFO] WBNCF:  170: 3/10 folds: {'aupr': 0.37897755359153606, 'auroc': 0.9068758283563292, 'lagcn_aupr': 0.38739084700919557, 'lagcn_auc': 0.9068619263212934, 'lagcn_f1_score': 0.44243792, 'lagcn_accuracy': 0.99089134, 'lagcn_recall': 0.38735178, 'lagcn_specificity': 0.99657536, 'lagcn_precision': 0.51578945}
+[09/11 14:45:22][INFO] WBNCF:  171: 3/10 folds time cost: 113.75668621063232
+[09/11 14:45:22][INFO] WBNCF:  158: begin train fold 4/10
+[09/11 14:47:14][INFO] WBNCF:  160: end train fold 4/10
+[09/11 14:47:15][INFO] WBNCF:   77: eval time cost: 0.8949222564697266
+[09/11 14:47:15][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:47:15][INFO] WBNCF:   86: save time cost: 0.002002716064453125
+[09/11 14:47:15][INFO] WBNCF:  170: 4/10 folds: {'aupr': 0.35998692439807184, 'auroc': 0.9174481857966463, 'lagcn_aupr': 0.3672837679736082, 'lagcn_auc': 0.9174168444727245, 'lagcn_f1_score': 0.4351145, 'lagcn_accuracy': 0.98908436, 'lagcn_recall': 0.45059288, 'lagcn_specificity': 0.99415576, 'lagcn_precision': 0.42066422}
+[09/11 14:47:15][INFO] WBNCF:  171: 4/10 folds time cost: 113.20189929008484
+[09/11 14:47:15][INFO] WBNCF:  158: begin train fold 5/10
+[09/11 14:49:15][INFO] WBNCF:  160: end train fold 5/10
+[09/11 14:49:16][INFO] WBNCF:   77: eval time cost: 0.9224953651428223
+[09/11 14:49:16][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:49:16][INFO] WBNCF:   86: save time cost: 0.0019989013671875
+[09/11 14:49:16][INFO] WBNCF:  170: 5/10 folds: {'aupr': 0.4053944548671174, 'auroc': 0.923496311764319, 'lagcn_aupr': 0.40227100184104636, 'lagcn_auc': 0.9235052855608346, 'lagcn_f1_score': 0.44656488, 'lagcn_accuracy': 0.9893052, 'lagcn_recall': 0.4624506, 'lagcn_specificity': 0.9942672, 'lagcn_precision': 0.43173432}
+[09/11 14:49:16][INFO] WBNCF:  171: 5/10 folds time cost: 121.01950693130493
+[09/11 14:49:16][INFO] WBNCF:  158: begin train fold 6/10
+[09/11 14:51:11][INFO] WBNCF:  160: end train fold 6/10
+[09/11 14:51:12][INFO] WBNCF:   77: eval time cost: 0.7616713047027588
+[09/11 14:51:12][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:51:12][INFO] WBNCF:   86: save time cost: 0.002002239227294922
+[09/11 14:51:12][INFO] WBNCF:  170: 6/10 folds: {'aupr': 0.353891054999395, 'auroc': 0.8994518225179762, 'lagcn_aupr': 0.36158632815934505, 'lagcn_auc': 0.8994272514709729, 'lagcn_f1_score': 0.39729118, 'lagcn_accuracy': 0.99015343, 'lagcn_recall': 0.3478261, 'lagcn_specificity': 0.99620295, 'lagcn_precision': 0.4631579}
+[09/11 14:51:12][INFO] WBNCF:  171: 6/10 folds time cost: 116.35707139968872
+[09/11 14:51:12][INFO] WBNCF:  158: begin train fold 7/10
+[09/11 14:53:06][INFO] WBNCF:  160: end train fold 7/10
+[09/11 14:53:07][INFO] WBNCF:   77: eval time cost: 0.9000899791717529
+[09/11 14:53:07][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:53:07][INFO] WBNCF:   86: save time cost: 0.0030062198638916016
+[09/11 14:53:07][INFO] WBNCF:  170: 7/10 folds: {'aupr': 0.329550188081119, 'auroc': 0.888834856530847, 'lagcn_aupr': 0.3299467845254134, 'lagcn_auc': 0.8888103607285434, 'lagcn_f1_score': 0.38942307, 'lagcn_accuracy': 0.99063283, 'lagcn_recall': 0.3201581, 'lagcn_specificity': 0.99694747, 'lagcn_precision': 0.4969325}
+[09/11 14:53:07][INFO] WBNCF:  171: 7/10 folds time cost: 114.3489556312561
+[09/11 14:53:07][INFO] WBNCF:  158: begin train fold 8/10
+[09/11 14:54:58][INFO] WBNCF:  160: end train fold 8/10
+[09/11 14:54:59][INFO] WBNCF:   77: eval time cost: 0.7962982654571533
+[09/11 14:54:59][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:54:59][INFO] WBNCF:   86: save time cost: 0.00299835205078125
+[09/11 14:54:59][INFO] WBNCF:  170: 8/10 folds: {'aupr': 0.35029390311347236, 'auroc': 0.8687828844323392, 'lagcn_aupr': 0.36130373877201316, 'lagcn_auc': 0.8687707428998321, 'lagcn_f1_score': 0.4305835, 'lagcn_accuracy': 0.98956335, 'lagcn_recall': 0.4229249, 'lagcn_specificity': 0.99490005, 'lagcn_precision': 0.4385246}
+[09/11 14:54:59][INFO] WBNCF:  171: 8/10 folds time cost: 112.49133801460266
+[09/11 14:54:59][INFO] WBNCF:  158: begin train fold 9/10
+[09/11 14:56:51][INFO] WBNCF:  160: end train fold 9/10
+[09/11 14:56:52][INFO] WBNCF:   77: eval time cost: 0.8243057727813721
+[09/11 14:56:52][INFO] WBNCF:   85: WBNCF(
+  (drug_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=663, out_features=32, bias=True)
+    (bgnn): BGCNA(663, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (disease_neighbor_encoder): NeighborEmbedding(
+    (shutcut): Linear(in_features=409, out_features=32, bias=True)
+    (bgnn): BGCNA(409, 32)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (interaction_encoder): InteractionEmbedding(
+    (drug_project): Linear(in_features=663, out_features=64, bias=False)
+    (disease_project): Linear(in_features=409, out_features=64, bias=False)
+    (dropout): Dropout(p=0.4, inplace=False)
+  )
+  (decoder): InteractionDecoder(
+    (decoder): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.4, inplace=False)
+      (3): Linear(in_features=64, out_features=32, bias=True)
+      (4): ReLU(inplace=True)
+      (5): Dropout(p=0.4, inplace=False)
+      (6): Linear(in_features=32, out_features=1, bias=True)
+      (7): Sigmoid()
+    )
+  )
+)
+[09/11 14:56:52][INFO] WBNCF:   86: save time cost: 0.003000020980834961
+[09/11 14:56:52][INFO] WBNCF:  170: 9/10 folds: {'aupr': 0.4572703351525861, 'auroc': 0.9210869263584409, 'lagcn_aupr': 0.4543560702743922, 'lagcn_auc': 0.921067285563768, 'lagcn_f1_score': 0.5276596, 'lagcn_accuracy': 0.99181294, 'lagcn_recall': 0.49011856, 'lagcn_specificity': 0.996538, 'lagcn_precision': 0.5714286}
+[09/11 14:56:52][INFO] WBNCF:  171: 9/10 folds time cost: 112.50287342071533
+[09/11 14:56:52][INFO] WBNCF:  177: total time cost:1147.433613538742
+[09/11 14:56:52][INFO] WBNCF:  192: final Cdataset-global-10-fold-auroc:0.903838690252879-aupr:0.36412291074577446
+[09/11 14:56:52][INFO] WBNCF:  209: save final results to r'runs\global-10-fold\Cdataset\WBNCF\2023-09-11_14-37-44\final-Cdataset-global-10-auroc_0.903838690252879-aupr_0.36412291074577446-fold.mat'
+[09/11 14:56:52][INFO] WBNCF:  210: final results: {'aupr': 0.36412291074577446, 'auroc': 0.903838690252879, 'lagcn_aupr': None, 'lagcn_auc': None, 'lagcn_f1_score': None, 'lagcn_accuracy': None, 'lagcn_recall': None, 'lagcn_specificity': None, 'lagcn_precision': None}

@@ -1,0 +1,55 @@
+alpha: 0.5
+comment: runs
+dataset_name: Fdataset
+dataset_type: PairGraphDataset
+debug: false
+disease_feature_topk: 20
+disease_idx: null
+disease_neighbor_num: 25
+dropout: 0.4
+drug_feature_topk: 20
+drug_idx: null
+drug_neighbor_num: 25
+embedding_dim: 64
+epochs: 64
+gamma: 2.0
+global_test_all_zero: false
+gpus: 1
+hidden_dims: !!python/tuple
+- 64
+- 32
+lamda: 0.8
+log_dir: runs\global-10-fold\Fdataset\WBNCF\2023-09-16_08-27-34
+loss_fn: focal
+lr: 0.0005
+model: NNCFDR
+n_disease: 313
+n_drug: 593
+n_splits: 10
+neighbor_embedding_dim: 32
+pos_weight: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  3ivCa+xuWkA=
+profiler: false
+seed: 666
+separate: false
+size_u: 593
+size_v: 313
+split_id: 0
+split_mode: global
+time_stamp: 2023-09-16_08-27-34
+train_fill_unknown: true

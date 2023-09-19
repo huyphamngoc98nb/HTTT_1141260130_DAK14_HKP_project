@@ -1,0 +1,56 @@
+alpha: 0.5
+comment: runs
+dataset_name: Cdataset
+dataset_type: PairGraphDataset
+debug: false
+dirpath: runs\global-10-fold\Cdataset\WBNCF\2023-09-11_08-28-09\lightning_logs\version_0\checkpoints
+disease_feature_topk: 4
+disease_idx: null
+disease_neighbor_num: 25
+dropout: 0.4
+drug_feature_topk: 4
+drug_idx: null
+drug_neighbor_num: 25
+embedding_dim: 64
+epochs: 64
+gamma: 2.0
+global_test_all_zero: false
+gpus: 1
+hidden_dims: !!python/tuple
+- 64
+- 32
+lamda: 0.8
+log_dir: runs\global-10-fold\Cdataset\WBNCF\2023-09-11_08-28-09
+loss_fn: focal
+lr: 0.0005
+model: NNCFDR
+n_disease: 409
+n_drug: 663
+n_splits: 10
+neighbor_embedding_dim: 32
+pos_weight: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  RajqkQt/XUA=
+profiler: false
+seed: 666
+separate: false
+size_u: 663
+size_v: 409
+split_id: 2
+split_mode: global
+time_stamp: 2023-09-11_08-28-09
+train_fill_unknown: true

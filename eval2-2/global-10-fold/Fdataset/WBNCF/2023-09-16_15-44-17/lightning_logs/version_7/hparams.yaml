@@ -1,0 +1,56 @@
+alpha: 0.5
+comment: eval2-2
+dataset_name: Fdataset
+dataset_type: PairGraphDataset
+debug: false
+dirpath: eval2-2\global-10-fold\Fdataset\WBNCF\2023-09-16_15-44-17\lightning_logs\version_0\checkpoints
+disease_feature_topk: 20
+disease_idx: null
+disease_neighbor_num: 0
+dropout: 0.4
+drug_feature_topk: 20
+drug_idx: null
+drug_neighbor_num: 0
+embedding_dim: 64
+epochs: 64
+gamma: 2.0
+global_test_all_zero: false
+gpus: 1
+hidden_dims:
+- 64
+- 32
+lamda: 0.9
+log_dir: eval2-2\global-10-fold\Fdataset\WBNCF\2023-09-16_15-44-17
+loss_fn: focal
+lr: 0.0005
+model: NNCFDR
+n_disease: 313
+n_drug: 593
+n_splits: 10
+neighbor_embedding_dim: 32
+pos_weight: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  969Xaf9qWkA=
+profiler: false
+seed: 666
+separate: false
+size_u: 593
+size_v: 313
+split_id: 7
+split_mode: global
+time_stamp: 2023-09-16_15-44-17
+train_fill_unknown: false
